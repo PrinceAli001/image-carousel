@@ -11,3 +11,28 @@
     grid-template-columns: repeat(9,1fr);
     grid-template-rows: 1fr;
 }
+#img-div div{
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#img-one{
+    background-image: url(../Images/bishop.jpg);
+    background-size: contain;
+}
+#img-two{
+    background-image: url(../Images/douchebag.png);
+    background-size: contain;
+}
+#img-three{
+    background-image: url(../Images/duckess.webp);
+    background-size: cover;
+}
+#img-four{
+    background-image: url(../Images/logo.png);
+    background-size: contain;
+}
+#img-five{
+    background-image: url(../Images/girl.webp);
+    background-size: cover;
+}

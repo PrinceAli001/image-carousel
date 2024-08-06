@@ -8,31 +8,83 @@
     outline: auto;
     height: 200px;
     display: grid;
+    text-align: center;
     grid-template-columns: repeat(9,1fr);
     grid-template-rows: 1fr;
 }
-#img-div div{
-    height: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
+img{
+    height: 150px;
+    width: 150px;
 }
-#img-one{
-    background-image: url(../Images/bishop.jpg);
-    background-size: contain;
+#div-one{
+    grid-area: 1/5/2/6;
 }
-#img-two{
-    background-image: url(../Images/douchebag.png);
-    background-size: contain;
+#div-two{
+    grid-area: 1/6/2/7;
 }
-#img-three{
-    background-image: url(../Images/duckess.webp);
-    background-size: cover;
+#div-three{
+    grid-area: 1/7/2/8;
 }
-#img-four{
-    background-image: url(../Images/logo.png);
-    background-size: contain;
+#div-four{
+    grid-area: 1/8/2/9;
 }
-#img-five{
-    background-image: url(../Images/girl.webp);
-    background-size: cover;
+#div-five{
+    grid-area: 1/9/2/10;
+}
+#div-six{
+    grid-area: 1/5/2/6;
+    border-top: 3px solid #ffa500;
+    border-left: 3px solid #ffa500;
+    border-right: 3px solid #0000ff;
+    border-bottom: 3px solid #0000ff;
+    border-radius: 10px;
+    padding: 30px 0 0 0;
+}
+#arrow-container{
+    /* border: 1px solid blue; */
+    height: 73px;
+    margin: 30px 0 30px 0;
+    display: flex;
+    justify-content: space-between;
+
+}
+#left-arrow, #right-arrow{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border: 1px solid;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background-color: rgba(0, 0, 0, 0.1);
+    height: 73px;
+    width: 40px;
+}
+#right-arrow{
+    justify-content: flex-end;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+#left-arrow img, #right-arrow img{
+    height: 25px;
+    width: 25px;
+}
+#dot-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    height: 20px;
+}
+#dot-container div{
+    border: 1px solid #0000ff;
+    border-radius: 50%;
+    height: 8px;
+    width: 8px;
+}
+#dot-container #dot-one{
+    height: 12px;
+    width: 12px;
+    background-color: #ffa500;
 }

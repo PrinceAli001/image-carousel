@@ -16,6 +16,9 @@ img{
     height: 150px;
     width: 150px;
 }
+#img-div div{
+    padding-top: 5px;
+}
 #div-one{
     grid-area: 1/5/2/6;
 }
@@ -31,7 +34,7 @@ img{
 #div-five{
     grid-area: 1/9/2/10;
 }
-#div-six{
+#img-div #div-six{
     grid-area: 1/5/2/6;
     border-top: 3px solid #ffa500;
     border-left: 3px solid #ffa500;

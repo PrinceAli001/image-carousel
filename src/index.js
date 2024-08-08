@@ -30,9 +30,10 @@ function display() {
     let imgFive = document.createElement('img');
     let imgSix = document.createElement('img');
     let imgSeven = document.createElement('img');
-    let arr = ['one','two','three','four','five'];
+    let arr = ['zero','one','two','three','four'];
     let changedNumber = 0;
     let currentPosition;
+    let interval;
     
 
     imgOne.src = Bishop;
@@ -51,8 +52,31 @@ function display() {
     leftArrow.appendChild(imgSix);
     rightArrow.appendChild(imgSeven);
 
+
+    function startInterval() {
+        interval = setInterval(next, 5000);
+    };
+    function previous() {
+        changedNumber-= 1;
+        if (changedNumber < 0) {
+            changedNumber = 0
+        };
+        currentPosition = arr[changedNumber];
+        moveImages(currentPosition);
+    };
+    function next() {
+        changedNumber+= 1;
+        if (changedNumber > 4) {
+            changedNumber = 0
+        };
+        currentPosition = arr[changedNumber];
+        moveImages(currentPosition);
+    };
+
+
+
     dotOne.addEventListener('click', () => {
-        moveImages('five');
+        moveImages('zero');
         changedNumber = 0;
     });
     dotTwo.addEventListener('click', () => {
@@ -71,32 +95,8 @@ function display() {
         moveImages('four');
         changedNumber = 4;
     });
-    leftArrow.addEventListener('click', () => {
-        changedNumber-= 2;
-        currentPosition = arr[changedNumber];
-        moveImages(currentPosition);
+    leftArrow.addEventListener('click', previous);
+    rightArrow.addEventListener('click', next);
 
-        if (changedNumber < 0) {
-            changedNumber = 0
-        };
-    });
-    rightArrow.addEventListener('click', () => {
-        changedNumber++;
-        currentPosition = arr[changedNumber];
-        moveImages(currentPosition);
-
-        if (changedNumber > 4) {
-            changedNumber = 4
-        };
-    });
-
-    setInterval(() => {
-        currentPosition = arr[changedNumber];
-        moveImages(currentPosition);
-        changedNumber++;
-
-        if (changedNumber > 4) {
-            changedNumber = 0
-        };
-    }, 3000);
+    startInterval();
 }
